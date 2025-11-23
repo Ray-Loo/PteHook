@@ -12,6 +12,7 @@ UINT64 vaToPa(UINT64 virtualAddress) {
     return MmGetPhysicalAddress((void*)virtualAddress).QuadPart;
 }
 
+//借鉴自csdn,项目直接使用指针操作写入,并未使用该函数,仅供参考
 bool MdlWriteMemory(PVOID pBaseAddress, PVOID pWriteData, SIZE_T writeDataSize)
 {
 	PMDL pMdl = NULL;
